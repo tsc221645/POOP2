@@ -51,7 +51,7 @@ body{
 ----------------------------------------------------------------*/
 footer{
     text-align: left;
-    height: 10vh;
+    height: 18vh;
     padding:10px;
     border-width: 5px;
     margin:none;
@@ -65,7 +65,24 @@ footer{
 ----------------------------------------------------------------*/
 .p1{
     font-family: "Poppins", sans-serif;
-    padding-left: 20px;
+    padding-left: 60px;
     font-size: xx-large;
+    font-weight: bold;
     color: white;
+}
+
+.footer1{
+    font-family: "Poppins", sans-serif;
+    padding-left: 60px;
+    padding-bottom: 5px;
+    padding-top:5px;
+    color: white;
+}
+
+.button1{
+    border: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    background-color: #0e3d6f;
 }
