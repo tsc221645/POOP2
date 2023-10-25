@@ -1,9 +1,71 @@
-h1{
-    color: #ffffff;
-    text-align:center;
-    font-family: inherit;
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
 }
 
+h1{
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    background-color: #0e3d6f;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+/*--------------------------------------------------------------
+|                     HEADER                                    |
+----------------------------------------------------------------*/
+header{
+    text-align: left;
+    height: 10vh;
+    width:100vw;
+    padding:10px;
+    margin:none;
+    background-color: #0e3d6f;
+    
+}
+
+/*--------------------------------------------------------------
+|                     BODY                                     |
+----------------------------------------------------------------*/
 body{
-    background-color: #3A526B;
+    background-color:#1376E1;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(#0e3d6f,#1376E1,#0e3d6f);
+}
+
+/*--------------------------------------------------------------
+|                     FOOTER                                     |
+----------------------------------------------------------------*/
+footer{
+    text-align: left;
+    height: 10vh;
+    padding:10px;
+    border-width: 5px;
+    margin:none;
+    font-family: "Poppins", sans-serif;
+    background-color: #0e3d6f;
+    color: white;
+}
+
+/*--------------------------------------------------------------
+|                     DIVS                                      |
+----------------------------------------------------------------*/
+.p1{
+    font-family: "Poppins", sans-serif;
+    padding-left: 20px;
+    font-size: xx-large;
+    color: white;
 }
