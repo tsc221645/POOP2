@@ -18,7 +18,7 @@ body {
 
 .container {
   display: flex;
-  height: 482.5px;
+  height: 509px;
   width: 770px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   margin: auto;
@@ -51,7 +51,7 @@ form {
   border-radius: 5%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
-  margin-bottom: 20px;
+  margin-bottom: auto;
   color: #333; /* Texto oscuro para contraste en fondo claro */
 }
 
