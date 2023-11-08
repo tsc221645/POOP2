@@ -12,6 +12,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DashBoardComponent } from './components/dash-board/dash-board.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     ProfileComponent,
     RegisterComponent,
-    FooterComponent
+    FooterComponent,
+    DashBoardComponent
   ],
   imports: [
     BrowserModule,
