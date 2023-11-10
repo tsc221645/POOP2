@@ -1,144 +1,173 @@
 
-<!-- Section: Design Block -->
-<section class="background-radial-gradient overflow-hidden">
-  <style>
-    .background-radial-gradient {
-      background-color: hsl(218, 41%, 15%);
-      background-image: radial-gradient(650px circle at 0% 0%,
-          hsl(218, 41%, 35%) 15%,
-          hsl(218, 41%, 30%) 35%,
-          hsl(218, 41%, 20%) 75%,
-          hsl(218, 41%, 19%) 80%,
-          transparent 100%),
-        radial-gradient(1250px circle at 100% 100%,
-          hsl(218, 41%, 45%) 15%,
-          hsl(218, 41%, 30%) 35%,
-          hsl(218, 41%, 20%) 75%,
-          hsl(218, 41%, 19%) 80%,
-          transparent 100%);
-    }
 
-    #radius-shape-1 {
-      height: 220px;
-      width: 220px;
-      top: -60px;
-      left: -130px;
-      background: radial-gradient(#1e5fd6, #0e84e6);
-      overflow: hidden;
-    }
 
-    #radius-shape-2 {
-      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-      bottom: -60px;
-      right: -110px;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(#1e5fd6,  #0e84e6);
-      overflow: hidden;
-    }
-    #radius-shape-2 {
-      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-      bottom: -60px;
-      right: -110px;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(#1e5fd6,  #0e84e6);
-      overflow: hidden;
-    }
+<app-navbar></app-navbar>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center py-2">
+    <div class="container d-flex align-items-center justify-content-between">
 
-    .bg-glass {
-      background-color: hsla(0, 0%, 100%, 0.9) !important;
-      backdrop-filter: saturate(200%) blur(25px);
-    }
-  </style>
-
-  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-    <div class="row gx-lg-5 align-items-center mb-5">
-      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          The best offer <br />
-          <span style="color: hsl(218, 81%, 75%)">for your business</span>
-        </h1>
-        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Temporibus, expedita iusto veniam atque, magni tempora mollitia
-          dolorum consequatur nulla, neque debitis eos reprehenderit quasi
-          ab ipsum nisi dolorem modi. Quos?
-        </p>
+      <div id="logo">
+        <h1><a ><span></span>CV BUILDER</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
       </div>
 
-      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+      <nav id="navbar" class="navbar ">
+        <ul>
+          <li ><a class="nav-link scrollto active" >Login</a></li>
+          <li><a class="nav-link scrollto" ></a></li>
 
-        <div class="card bg-glass">
-          <div class="card-body px-4 py-5 px-md-5">
-            <form>
-              <!-- 2 column grid layout with text inputs for the first and last names -->
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">First name</label>
-                  </div>
+          <li><a routerLink="/inicio" class="nav-link scrollto">Inicio</a></li>
+
+
+
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+  <section class="background-radial-gradient overflow-hidden">
+    <style>
+      .background-radial-gradient {
+        background-color: #3A526B;
+        background-image: radial-gradient(650px circle at 0% 0%,
+            #126dbcda 5%,
+            #126abcdb 20%,
+            #5d9ac5 30%,
+            #5d8ec5 40%,
+            transparent 90%),
+          radial-gradient(1250px circle at 100% 100%,
+            #ffffff7c 5%,
+            #c5c5c5 15%,
+            #c2c2c279 20%,
+            #3c616c2f 30%,
+            transparent 70%);
+      }
+
+      #radius-shape-1 {
+        height: 220px;
+        width: 220px;
+        top: -60px;
+        left: -130px;
+        background: radial-gradient(#f3a11f, #f9de455b);
+        overflow: hidden;
+      }
+
+      #radius-shape-2 {
+        border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+        bottom: -60px;
+        right: -110px;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(#F3A11F, #f9de455b);
+        overflow: hidden;
+      }
+
+      .bg-glass {
+        background-color: hsla(0, 0%, 100%, 0.9) !important;
+        backdrop-filter: saturate(200%) blur(25px);
+      }
+    </style>
+
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-6">
+      <div class="row gx-lg-8 align-items-center mb-6">
+        <div class="col-lg-6 mb-6 mb-lg-0" style="z-index: 10">
+          <h1 class="my-8 display-9 fw-bold ls-tight" style="color: hsl(222, 100%, 98%);margin-top: 1.5rem;">
+            ¿Te encuentras preparado para <br />
+            <span style="color: hsl(218, 83%, 65%)">impulsar tu carrera?</span>
+          </h1>
+
+        </div>
+
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+          <div class="card " style="background-color: #fafdfefe !important;">
+            <div class="card-body px-4 py-5 px-md-5">
+              <form #registerForm="ngForm" class="align-items-center">
+
+                <div class="text-center mb-3">
+                  <span class="h1 fw-bold mb-0">Inicie sesión</span>
                 </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Last name</label>
+
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form2Example17">Usuario:</label>
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span style="background-color: rgb(247, 238, 236)" class="input-group-text" id="basic-addon1"
+                        class="form-control form-control-lg">@</span>
+                    </div>
+                    <input type="email" id="form2Example17" class="form-control form-control-lg" name="usuario"
+                      #usuario="ngModel" [(ngModel)]="usuarioModel.usuario" required>
                   </div>
+
+
                 </div>
-              </div>
 
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form3Example3" class="form-control" />
-                <label class="form-label" for="form3Example3">Email address</label>
-              </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form2Example27">Contraseña:</label>
+                  <input type="password" id="form2Example27" class="form-control form-control-lg" name="password"
+                    #password="ngModel" [(ngModel)]="usuarioModel.password" required>
 
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" />
-                <label class="form-label" for="form3Example4">Password</label>
-              </div>
+                </div>
 
-              <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-center mb-4">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                <label class="form-check-label" for="form2Example33">
-                  Subscribe to our newsletter
-                </label>
-              </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form2Example27">Confirmar Contraseña:</label>
+                  <input type="password" id="form2Example27" class="form-control form-control-lg" name="repeatPass"
+                    [(ngModel)]="repeatPass" required>
+                </div>
 
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4">
-                Sign up
-              </button>
+                <div class="form-check d-flex justify-content-center mb-2">
+                  <input ngModel name="terminos" class="form-check-input me-2" type="checkbox" value=""
+                    id="form2Example3c" required />
+                  <label class="form-check-label" for="form2Example3">
+                    Estoy de acuerdo con los <a> <b>Términos del servicio</b></a>
+                  </label>
+                </div>
 
-              <!-- Register buttons -->
-              <div class="text-center">
-                <p>or sign up with:</p>
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fa-brands fa-github"></i>
-                </button>
+                <div class="text-center mb-3">
+                  <button [disabled]="!registerForm.form.valid" id="boton" class="btn btn-dark btn-lg btn-block"
+                    type="button" routerLinkActive="active" (click)="checkPass()">Login</button>
+                </div>
 
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-google"></i>
-                </button>
+                <div id="textoI" class="text-center mb-3">
+                  <p>Inicia sesión con:</p>
+                  <button id="ini" type="button" class="btn btn-dark btn-floating mx-2">
+                    <a style="text-decoration: none;color:white" href="https://www.facebook.com" target="_blank"><i
+                        class="bi bi-facebook"></i></a>
+                  </button>
 
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-twitter"></i>
-                </button>
+                  <button id="ini" type="button" class="btn btn-dark btn-floating mx-2">
+                    <a style="text-decoration: none;color:white" href="https://accounts.google.com/" target="_blank"><i
+                        class="bi bi-google"></i></a>
 
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-github"></i>
-                </button>
-              </div>
-            </form>
+
+                  </button>
+
+                  <button id="ini" type="button" class="btn btn-dark btn-floating mx-1">
+                    <a style="text-decoration: none;color:white" href="https://twitter.com/" target="_blank"><i
+                        class="bi bi-twitter"></i></a>
+                  </button>
+
+                  <button id="ini" type="button" class="btn btn-dark btn-floating mx-1">
+                    <a style="text-decoration: none;color:white" href="https://github.com/" target="_blank"><i
+                        class="bi bi-github"></i></a>
+                  </button>
+                </div>
+
+                <p style="color: #393f81;margin-bottom: 0px;" x>¿No tiene una cuenta? <a id="registrar"
+                    style="color: #393f81;text-decoration: none" routerLink="/registro"
+                    routerLinkActive="active">Registrate acá</a></p>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- Section: Design Block -->
+  </section>

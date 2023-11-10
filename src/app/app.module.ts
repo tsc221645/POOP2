@@ -13,6 +13,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DashBoardComponent } from './components/dash-board/dash-board.component';
+import { DefaultAdminComponent } from './components/default-admin/default-admin.component';
+import { DefaultRouterComponent } from './components/default-router/default-router.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { DashBoardComponent } from './components/dash-board/dash-board.component
     ProfileComponent,
     RegisterComponent,
     FooterComponent,
-    DashBoardComponent
+    DashBoardComponent,
+    DefaultAdminComponent,
+    DefaultRouterComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
