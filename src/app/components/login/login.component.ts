@@ -78,8 +78,8 @@ export class LoginComponent implements OnInit {
           console.log(response);
           console.log(response.usuario.rol)
           Swal.fire({
-            //imageUrl: './../../../assets/images/NGTIcon.png',
-            //imageHeight: 150,
+            imageUrl: '../../../assets/images/index/CV_Logo.jpeg',
+            imageHeight: 150,
             title: 'Bienvenido',
             text: 'Logueado exitosamente',
           })

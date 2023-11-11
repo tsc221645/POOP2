@@ -41,7 +41,7 @@ button {
 .scroll-top {
   width: 45px;
   height: 45px;
-  background: #2F80ED;
+  background: #386EA8;
   display: none;
   justify-content: center;
   align-items: center;
@@ -58,7 +58,7 @@ button {
 
 .scroll-top:hover {
   color: #ffffff;
-  background: rgba(47, 128, 237, 0.8);
+  background: #386EA8;
 }
 
 /* =============================
@@ -302,15 +302,15 @@ p {
 .button {
   height: 44px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   box-sizing: border-box;
   line-height: 1;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: #2F80ED;
+  background: #386EA8;
   color: #ffffff;
-  border: 1px solid transparent;
+  border: 5px solid transparent;
   position: relative;
   z-index: 1;
   padding: 0 25px;
@@ -329,7 +329,7 @@ p {
   width: 0;
   height: 0;
   padding: 50%;
-  border-radius: 50%;
+  border-radius: 90%;
   margin: auto;
   background: rgba(0, 0, 0, 0.1);
   z-index: -1;
@@ -2107,7 +2107,7 @@ p{
   margin-left: 5px;
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #28a8fd;
+  color: #386EA8;
 }
 
 .navbar a, .navbar , .navbar , .navbar  > a {
