@@ -8,6 +8,7 @@ import { DefaultAdminComponent } from './components/default-admin/default-admin.
 import { AdminGuard } from './services/admin.guard';
 import { DefaultRouterComponent } from './components/default-router/default-router.component';
 import { UsuarioGuard } from './services/users.guard';
+import { ReccomendationsComponent } from './components/reccomendations/reccomendations.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'dash-board', component: DashBoardComponent},
+  {path: 'reccomendations', component: ReccomendationsComponent},
 
   { path: 'admin',  component: DefaultAdminComponent, canActivate: [AdminGuard]  ,children: [
     {path: 'dash-board', component: DashBoardComponent}
