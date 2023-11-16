@@ -16,7 +16,8 @@ import { DashBoardComponent } from './components/dash-board/dash-board.component
 import { DefaultAdminComponent } from './components/default-admin/default-admin.component';
 import { DefaultRouterComponent } from './components/default-router/default-router.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
-import { ReccomendationsComponent } from './reccomendations/reccomendations.component';
+import { ReccomendationsComponent } from './components/reccomendations/reccomendations.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ReccomendationsComponent } from './reccomendations/reccomendations.comp
     DefaultAdminComponent,
     DefaultRouterComponent,
     EditProfileComponent,
-    ReccomendationsComponent
+    ReccomendationsComponent,
+    
   ],
   imports: [
     BrowserModule,
