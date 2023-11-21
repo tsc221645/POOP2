@@ -19,6 +19,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { ReccomendationsComponent } from './components/reccomendations/reccomendations.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,12 +36,13 @@ import { ReccomendationsComponent } from './components/reccomendations/reccomend
     EditProfileComponent,
     ReccomendationsComponent,
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
