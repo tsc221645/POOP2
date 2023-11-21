@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var name: any;
 
 @Component({
   selector: 'app-reccomendations',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./reccomendations.component.scss']
 })
 export class ReccomendationsComponent {
-
+  constructor(){
+    
+  }
 }
