@@ -1,3 +1,19 @@
+body {
+  background: url('https://img.freepik.com/premium-photo/abstract-luxury-blur-grey-color-gradient-used-as-background-studio-wall-display-your-products_1258-54652.jpg');
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 30px 10px 10px 50px;
+}
+
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
 .profile-container {
   height: 140px;
@@ -7,5 +23,26 @@
 .profile-image {
   max-height: 100%;
   max-width: 100%;
+  border-radius: 100%;
 }
 
+.nav-link {
+  color: #000000;
+}
+
+.nav-link:hover {
+  color: #E08F02;
+}
+
+.btn {
+  background-color: #E08F02;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #d17d02;
+}
+
+.card-title {
+  color: #E08F02;
+}
