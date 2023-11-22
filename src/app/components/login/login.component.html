@@ -1,30 +1,173 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <!-- Enlazar el archivo de estilos CSS -->
-</head>
-<body>
-  <div class="container">
-    <div class="Info">
-        <h2>Bienvenido de Nuevo</h2>
-        <hr />
-        <p class="text-1">"¡Bienvenido al futuro de tu carrera! Juntos, crearemos un CV que te acerque a tus metas profesionales. ¡Empecemos construyendo tu camino hacia el éxito!"</p>
-    </div>
-    <div class="form">
-        <form>
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" name="username" required>
 
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
 
-            <button type="submit">Iniciar sesión</button>
-            <label>¿No tienes una cuenta? <a href="/register">Regístrate aquí</a>.</label>
-        </form>
+
+<app-navbar></app-navbar>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center py-2">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div id="logo">
+        <h1><a ><span></span>CV BUILDER</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar ">
+        <ul>
+          <li ><a class="nav-link scrollto active" >Login</a></li>
+          <li><a class="nav-link scrollto" ></a></li>
+
+          <li><a routerLink="/inicio" class="nav-link scrollto">Inicio</a></li>
+
+
+
+        </ul>
+      </nav><!-- .navbar -->
+
     </div>
-  </div>
-</body>
-</html>
+  </header><!-- End Header -->
+
+
+
+  <section class="background-radial-gradient overflow-hidden">
+    <style>
+      .background-radial-gradient {
+        background-color: #072c47;
+        background-image: radial-gradient(650px circle at 0% 0%,
+            #126dbcda 5%,
+            #126abcdb 20%,
+            #5d9ac5 30%,
+            #5d8ec5 40%,
+            transparent 90%),
+          radial-gradient(1250px circle at 100% 100%,
+            #ffffff7c 5%,
+            #c5c5c5 15%,
+            #c2c2c279 20%,
+            #3c616c2f 30%,
+            transparent 70%);
+      }
+
+      #radius-shape-1 {
+        height: 220px;
+        width: 220px;
+        top: -60px;
+        left: -130px;
+        background: radial-gradient(#f3a11f, #f9de455b);
+        overflow: hidden;
+      }
+
+      #radius-shape-2 {
+        border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+        bottom: -60px;
+        right: -110px;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(#F3A11F, #f9de455b);
+        overflow: hidden;
+      }
+
+      .bg-glass {
+        background-color: hsla(0, 0%, 100%, 0.9) !important;
+        backdrop-filter: saturate(200%) blur(25px);
+      }
+    </style>
+
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-6">
+      <div class="row gx-lg-8 align-items-center mb-6">
+        <div class="col-lg-6 mb-6 mb-lg-0" style="z-index: 10">
+          <h1 class="my-8 display-9 fw-bold ls-tight" style="color: hsl(222, 100%, 98%);margin-top: 1.5rem;">
+            ¿Te encuentras preparado para <br />
+            <span style="color: hsl(218, 83%, 65%)">impulsar tu carrera?</span>
+          </h1>
+
+        </div>
+
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+          <div class="card " style="background-color: #fafdfefe !important;">
+            <div class="card-body px-4 py-5 px-md-5">
+              <form #registerForm="ngForm" class="align-items-center">
+
+                <div class="text-center mb-3">
+                  <span class="h1 fw-bold mb-0">Inicie sesión</span>
+                </div>
+
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form2Example17">Usuario:</label>
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span style="background-color: rgb(247, 238, 236)" class="input-group-text" id="basic-addon1"
+                        class="form-control form-control-lg">@</span>
+                    </div>
+                    <input type="email" id="form2Example17" class="form-control form-control-lg" name="usuario"
+                      #usuario="ngModel" [(ngModel)]="usuarioModel.usuario" required>
+                  </div>
+
+
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form2Example27">Contraseña:</label>
+                  <input type="password" id="form2Example27" class="form-control form-control-lg" name="password"
+                    #password="ngModel" [(ngModel)]="usuarioModel.password" required>
+
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form2Example27">Confirmar Contraseña:</label>
+                  <input type="password" id="form2Example27" class="form-control form-control-lg" name="repeatPass"
+                    [(ngModel)]="repeatPass" required>
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-2">
+                  <input ngModel name="terminos" class="form-check-input me-2" type="checkbox" value=""
+                    id="form2Example3c" required />
+                  <label class="form-check-label" for="form2Example3">
+                    Estoy de acuerdo con los <a> <b>Términos del servicio</b></a>
+                  </label>
+                </div>
+
+                <div class="text-center mb-3">
+                  <button [disabled]="!registerForm.form.valid" id="boton" class="btn btn-dark btn-lg btn-block"
+                    type="button" routerLinkActive="active" (click)="checkPass()">Login</button>
+                </div>
+
+                <div id="textoI" class="text-center mb-3">
+                  <p>Inicia sesión con:</p>
+                  <button id="ini" type="button" class="btn btn-dark btn-floating mx-2">
+                    <a style="text-decoration: none;color:white" href="https://www.facebook.com" target="_blank"><i
+                        class="bi bi-facebook"></i></a>
+                  </button>
+
+                  <button id="ini" type="button" class="btn btn-dark btn-floating mx-2">
+                    <a style="text-decoration: none;color:white" href="https://accounts.google.com/" target="_blank"><i
+                        class="bi bi-google"></i></a>
+
+
+                  </button>
+
+                  <button id="ini" type="button" class="btn btn-dark btn-floating mx-1">
+                    <a style="text-decoration: none;color:white" href="https://twitter.com/" target="_blank"><i
+                        class="bi bi-twitter"></i></a>
+                  </button>
+
+                  <button id="ini" type="button" class="btn btn-dark btn-floating mx-1">
+                    <a style="text-decoration: none;color:white" href="https://github.com/" target="_blank"><i
+                        class="bi bi-github"></i></a>
+                  </button>
+                </div>
+
+                <p style="color: #393f81;margin-bottom: 0px;" x>¿No tiene una cuenta? <a id="registrar"
+                    style="color: #393f81;text-decoration: none" routerLink="/register"
+                    routerLinkActive="active">Registrate acá</a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

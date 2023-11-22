@@ -30,9 +30,19 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+<<<<<<< HEAD
               "src/styles.scss"
+=======
+              "src/styles.scss",
+              "node_modules/sweetalert2/src/sweetalert2.scss"
+
+>>>>>>> alejandro
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,8 +110,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "ba68d139-2c6e-452b-b82e-3c094d1fcfdc"
   }
 }
