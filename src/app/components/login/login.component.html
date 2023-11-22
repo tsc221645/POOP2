@@ -27,24 +27,23 @@
 
 
 
-  <!-- Section: Design Block -->
-<section class="background-radial-gradient overflow-hidden">
-  <style>
-    .background-radial-gradient {
-      background-color: hsl(218, 41%, 15%);
-      background-image: radial-gradient(650px circle at 0% 0%,
-          hsl(218, 41%, 35%) 15%,
-          hsl(218, 41%, 30%) 35%,
-          hsl(218, 41%, 20%) 75%,
-          hsl(218, 41%, 19%) 80%,
-          transparent 100%),
-        radial-gradient(1250px circle at 100% 100%,
-          hsl(218, 41%, 45%) 15%,
-          hsl(218, 41%, 30%) 35%,
-          hsl(218, 41%, 20%) 75%,
-          hsl(218, 41%, 19%) 80%,
-          transparent 100%);
-    }
+  <section class="background-radial-gradient overflow-hidden">
+    <style>
+      .background-radial-gradient {
+        background-color: #3A526B;
+        background-image: radial-gradient(650px circle at 0% 0%,
+            #126dbcda 5%,
+            #126abcdb 20%,
+            #5d9ac5 30%,
+            #5d8ec5 40%,
+            transparent 90%),
+          radial-gradient(1250px circle at 100% 100%,
+            #ffffff7c 5%,
+            #c5c5c5 15%,
+            #c2c2c279 20%,
+            #3c616c2f 30%,
+            transparent 70%);
+      }
 
     #radius-shape-1 {
       height: 220px;
@@ -151,15 +150,19 @@
                   <i class="fab fa-twitter"></i>
                 </button>
 
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-github"></i>
-                </button>
-              </div>
-            </form>
+                  <button id="ini" type="button" class="btn btn-dark btn-floating mx-1">
+                    <a style="text-decoration: none;color:white" href="https://github.com/" target="_blank"><i
+                        class="bi bi-github"></i></a>
+                  </button>
+                </div>
+
+                <p style="color: #393f81;margin-bottom: 0px;" x>¿No tiene una cuenta? <a id="registrar"
+                    style="color: #393f81;text-decoration: none" routerLink="/registro"
+                    routerLinkActive="active">Registrate acá</a></p>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- Section: Design Block -->
+  </section>

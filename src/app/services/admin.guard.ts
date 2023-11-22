@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate, Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,28 +12,33 @@ export class AdminGuard implements CanActivate {
 
   canActivate(){
     if(this.obtenerIdentidad().rol == "ROL_CLIENTE"){
-     this._router.navigate(['/inicio'])
+     this._router.navigate(['/index'])
+     console.log((false))
+
       return false;
     }
 
+    console.log((true))
 
     return true;
   }
 
-  obtenerIdentidad(){
+
     /**
      * Code generate by IA
      * Promt: I need to resolved: Argument of type 'string | null' is not assignable to parameter of type 'string'
     */
-    const identidadString = localStorage.getItem('identidad');
-    var identidad2 = identidadString ? JSON.parse(identidadString) : null; 
-    if(identidad2 != undefined){
-      this.identidad = identidad2;
-    } else {
-      this.identidad = null;
-    }
+    obtenerIdentidad(): any {
+      const identidadString = localStorage.getItem('identidad');
+      console.log(identidadString)
+      if (identidadString !== null) {
+        const identidad2 = JSON.parse(identidadString);
+        this.identidad = identidad2;
+      } else {
+        this.identidad = null;
+      }
 
-    return this.identidad;
-  }
+      return this.identidad;
+    }
 
 }

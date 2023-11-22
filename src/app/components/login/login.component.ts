@@ -78,22 +78,17 @@ export class LoginComponent implements OnInit {
           console.log(response);
           console.log(response.usuario.rol)
           Swal.fire({
-            imageUrl: './../../../assets/images/NGTIcon.png',
+            imageUrl: '../../../assets/images/index/CV_Logo.jpeg',
             imageHeight: 150,
             title: 'Bienvenido',
             text: 'Logueado exitosamente',
           })
           if(response.usuario.rol == "ROL_ADMINISTRADOR"){
-            this._router.navigate(['/admin/formulario']);
+            this._router.navigate(['/admin/dash-board']);
             console.log(response.usuario._id)
           }else {
-            if(response.usuario.rol == "DOCTOR"){
-              this._router.navigate(['/admin/formulario/' + response.usuario._id]);
-            }else {
+            this._router.navigate(['/user/dash-board/' + response.usuario._id]);
 
-              this._router.navigate(['/usuario/formulario/' + response.usuario._id]);
-
-            }
           }
         })
 
