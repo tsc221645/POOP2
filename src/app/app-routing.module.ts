@@ -9,6 +9,7 @@ import { AdminGuard } from './services/admin.guard';
 import { DefaultRouterComponent } from './components/default-router/default-router.component';
 import { UsuarioGuard } from './services/users.guard';
 import { ProfileComponent } from './components/profile/profile.component';
+import { RecommendationsComponent } from './components/recommendations/recommendations.component';
 
 
 const routes: Routes = [
@@ -17,15 +18,19 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'dash-board', component: DashBoardComponent},
   {path: 'profile', component: ProfileComponent},
+  {path: 'recommendations', component: RecommendationsComponent},
 
 
   { path: 'admin',  component: DefaultAdminComponent, canActivate: [AdminGuard]  ,children: [
-    {path: 'dash-board', component: DashBoardComponent}
+    {path: 'dash-board', component: DashBoardComponent},
+    {path: 'recommendations', component: RecommendationsComponent}
+
 
 
   ]},
   { path: 'user',  component: DefaultRouterComponent, canActivate: [UsuarioGuard]  ,children: [
-    {path: 'dash-board/:idUsuario', component: DashBoardComponent}
+    {path: 'dash-board/:idUsuario', component: DashBoardComponent},
+    {path: 'recommendations', component: RecommendationsComponent}
 
 
 
