@@ -29,7 +29,7 @@ const routes: Routes = [
 
 
   ]},
-  
+
     //Ruta final, redirecciona si no existe la ruta.
     { path: '**', component: IndexComponent },
 

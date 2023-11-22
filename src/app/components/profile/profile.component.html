@@ -1,4 +1,47 @@
-<body style="background: url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-54565.jpg);">
+<app-navbar></app-navbar>
+<body>
+<section class="background-radial-gradient overflow-hidden">
+  <style>
+    .background-radial-gradient {
+      background-color: #072c47;
+      background-image: radial-gradient(650px circle at 0% 0%,
+          #126dbcda 5%,
+          #126abcdb 20%,
+          #5d9ac5 30%,
+          #5d8ec5 40%,
+          transparent 90%),
+        radial-gradient(1250px circle at 100% 100%,
+          #ffffff7c 5%,
+          #c5c5c5 15%,
+          #c2c2c279 20%,
+          #3c616c2f 30%,
+          transparent 70%);
+    }
+
+    #radius-shape-1 {
+      height: 220px;
+      width: 220px;
+      top: -60px;
+      left: -130px;
+      background: radial-gradient(#f3a11f, #f9de455b);
+      overflow: hidden;
+    }
+
+    #radius-shape-2 {
+      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+      bottom: -60px;
+      right: -110px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(#F3A11F, #f9de455b);
+      overflow: hidden;
+    }
+
+    .bg-glass {
+      background-color: hsla(0, 0%, 100%, 0.9) !important;
+      backdrop-filter: saturate(200%) blur(25px);
+    }
+</style>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container" >
 <div class="row flex-lg-nowrap">
@@ -142,4 +185,4 @@
   </div>
 </div>
 </div>
-</body>
+
