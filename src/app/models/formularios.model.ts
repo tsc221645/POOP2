@@ -18,7 +18,7 @@ export class Formularios {
     public certificados:Number,
     public proyectos:Number,
     public referencia:String,
-    public detalles:String  
+    public detalles:String
   ){
   }
 }
