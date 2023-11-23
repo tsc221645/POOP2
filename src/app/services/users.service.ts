@@ -68,6 +68,22 @@ export class UsuarioService {
     return this._http.post(`${this.baseUrl}/agregarCliente`, parametros, { headers: this.headersVariable });
   }
 
+  editarUsuarios(modeloUsuario: Clientes, token:any): Observable<any> {
+    let parametros = JSON.stringify(modeloUsuario);
+    let headersToken = this.headersVariable.set('Authorization', token);
+    return this._http.put(`${this.baseUrl}/editarUsuario/` + modeloUsuario._id, parametros, { headers: headersToken })
+  }
+
+  obtenerUsuariosId(id:String, token:any): Observable<any>{
+    let headersToken = this.headersVariable.set('Authorization', token);
+    return this._http.get(`${this.baseUrl}/usuariosId/` + id, {headers: headersToken})
+  }
+
+  eliminarUsuarios(id : String, token:any): Observable<any> {
+    let headersToken = this.headersVariable.set('Authorization', token)
+    return this._http.delete(`${this.baseUrl}/eliminarUsuario/` + id, { headers: headersToken })
+  }
+
 
 
 }

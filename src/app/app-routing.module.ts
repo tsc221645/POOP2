@@ -18,7 +18,6 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'dash-board', component: DashBoardComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'recommendations', component: RecommendationsComponent},
 
 
   { path: 'admin',  component: DefaultAdminComponent, canActivate: [AdminGuard]  ,children: [
@@ -30,7 +29,8 @@ const routes: Routes = [
   ]},
   { path: 'user',  component: DefaultRouterComponent, canActivate: [UsuarioGuard]  ,children: [
     {path: 'dash-board/:idUsuario', component: DashBoardComponent},
-    {path: 'recommendations/:idUsuario', component: RecommendationsComponent}
+    {path: 'recommendations/:idUsuario', component: RecommendationsComponent},
+    {path: 'profile/:idUsuario', component: ProfileComponent}
 
 
 

@@ -1,20 +1,3 @@
-body {
-  background: url('https://img.freepik.com/premium-photo/abstract-luxury-blur-grey-color-gradient-used-as-background-studio-wall-display-your-products_1258-54652.jpg');
-  background-size: cover;
-  font-family: 'Arial', sans-serif;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  padding: 60px 60px 60px 60px;
-}
-
-.card {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
 .profile-container {
   height: 140px;
   background: linear-gradient(135deg, #386eab, #1376e1, #3a526b);
@@ -23,26 +6,137 @@ body {
 .profile-image {
   max-height: 100%;
   max-width: 100%;
-  border-radius: 100%;
 }
 
-.nav-link {
-  color: #000000;
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #3A526B;
+  z-index: 997;
+  transition: all 0.5s ease;
+  padding: 20px 0;
+}
+#header #logo h1 {
+  color: #efeded;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+}
+#header #logo h1 a {
+  color: #efeded;
+  display: inline-block;
+  text-decoration: none;
+}
+#header #logo h1 a span {
+  color: #fd8828;
+}
+#header #logo img {
+  padding: 0;
+  margin: 0;
+}
+#header.header-scrolled {
+  background: #fff;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
 }
 
-.nav-link:hover {
-  color: #E08F02;
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation
+*/
+.navbar {
+  padding: 0;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #222;
+  white-space: nowrap;
+  transition: 0.3s;
+  letter-spacing: 0;
+}
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #386EA8;
 }
 
-.btn {
-  background-color: #E08F02;
-  color: #fff;
+.navbar a, .navbar , .navbar , .navbar  > a {
+  color: #fff4ec;
 }
 
-.btn:hover {
-  background-color: #d17d02;
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
 }
-
-.card-title {
-  color: #E08F02;
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  text-transform: none;
+}
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+  color: #71c55d;
+}
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
 }
