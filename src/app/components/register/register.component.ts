@@ -15,10 +15,10 @@ export class RegisterComponent {
   public token;
   public repeatPass:string = ''
 
-  public usuarioModel: Clientes = new Clientes('', '', '', '', '', '', '', '', '', '', '');
+  public usuarioModel: Clientes = new Clientes('', '', '', '', '', '', '', '', '', '', '',"");
   public usuariosModelPost: Clientes;
   constructor( private _usuarioService: UsuarioService, private _router: Router) {
-    this.usuariosModelPost = new Clientes('','', '', '', '', '','', '', '','', '')
+    this.usuariosModelPost = new Clientes('','', '', '', '', '','', '', '','', '',"")
     this.token = this._usuarioService.obtenerToken();
   }
 
@@ -41,7 +41,7 @@ export class RegisterComponent {
     this._usuarioService.agregarUsuario(this.usuariosModelPost).subscribe(
       (response) => {
         localStorage.setItem("identidad", JSON.stringify(response.usuario))
-        console.log(response);
+        //console.log(response);
           this._router.navigate(['/login']);
           Swal.fire({
             icon: 'success',
@@ -49,7 +49,7 @@ export class RegisterComponent {
           })
       },
       (error) => {
-        console.log(error);
+        //console.log(error);
         Swal.fire({
           icon: 'error',
           title: error.error.message,

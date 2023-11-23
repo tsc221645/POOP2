@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       '',
       '',
       "",
-      ''
+      '',""
     );
   }
 
@@ -40,17 +40,17 @@ export class LoginComponent implements OnInit {
 
   getTokenPromesa(): Promise<any> {
     return new Promise((resolve, reject)=>{
-      this._usuarioService.login(this.usuarioModel,undefined).subscribe(
+      this._usuarioService.login(this.usuarioModel,"true").subscribe(
         (response)=>{
-         console.log(response);
-         console.log(response);
+        // console.log(response);
+         //console.log(response);
 
           localStorage.setItem("token", response.token)
 
           resolve(response);
         },
         (error)=>{
-          console.log(<any>error);
+         // console.log(<any>error);
 
         }
       )
@@ -71,13 +71,13 @@ export class LoginComponent implements OnInit {
 
   login(){
 
-    this._usuarioService.login(this.usuarioModel,undefined).subscribe(
+    this._usuarioService.login(this.usuarioModel,"true").subscribe(
       (response)=>{
 
         this.getTokenPromesa().then((respuesta)=>{
           localStorage.setItem("identidad", JSON.stringify(response.usuario))
-          console.log(response);
-          console.log(response.usuario.rol)
+         // console.log(response);
+         // console.log(response.usuario.rol)
           Swal.fire({
             imageUrl: '../../../assets/images/index/CV_Logo.jpeg',
             imageHeight: 150,
@@ -86,7 +86,7 @@ export class LoginComponent implements OnInit {
           })
           if(response.usuario.rol == "ROL_ADMINISTRADOR"){
             this._router.navigate(['/admin/dash-board/'+ response.usuario._id]);
-            console.log(response.usuario._id)
+           // console.log(response.usuario._id)
           }else {
             this._router.navigate(['/user/dash-board/' + response.usuario._id]);
 
@@ -95,7 +95,7 @@ export class LoginComponent implements OnInit {
 
       },
       (error)=>{
-        console.log(<any>error);
+        //console.log(<any>error);
 
         Swal.fire({
           icon: 'error',

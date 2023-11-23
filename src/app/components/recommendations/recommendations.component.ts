@@ -64,16 +64,16 @@ export class RecommendationsComponent implements OnInit{
   }
 
   postRecomendaciones(agregarRecomendacion:any) {
-    console.log(this.token)
+    //console.log(this.token)
     this._recomendacionesService.registrarRecomendaciones(this.recomendacionesModelPost, this.token).subscribe(
 
       (response) => {
-        console.log( this.token)
+       // console.log( this.token)
 
         this.getRecomendaciones()
         agregarRecomendacion.reset()
-        console.log(response)
-        console.log( this.token)
+        //.log(response)
+        //console.log( this.token)
 
         Swal.fire(
           'Se agregó correctamente la recomendación',
@@ -82,7 +82,7 @@ export class RecommendationsComponent implements OnInit{
         )
       },
       (error) => {
-        console.log(<any>error);
+        //console.log(<any>error);
         Swal.fire({
           icon: 'error',
           title: error.error.message,
@@ -113,7 +113,7 @@ export class RecommendationsComponent implements OnInit{
             )
           },
           (error) => {
-            console.log(error)
+           // console.log(error)
             Swal.fire({
               icon: 'error',
               title: 'Oops.',
@@ -128,7 +128,7 @@ export class RecommendationsComponent implements OnInit{
   }
 
   putRecomendaciones(idRecomendacion:any) {
-    console.log(idRecomendacion)
+   // console.log(idRecomendacion)
     this._recomendacionesService.editarRecomendaciones(this.recomendacionesModelIdEdit,  this._usuarioService.obtenerToken(), idRecomendacion).subscribe({
       next: (response: any) => {  // 200
         this.getRecomendaciones();

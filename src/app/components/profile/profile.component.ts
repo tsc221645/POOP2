@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit{
      private userRest: UsuarioService) {
 
 
-  this.userModelId   = new Clientes('','','','','','','','','','','');
+  this.userModelId   = new Clientes('','','','','','','','','','','',"");
   this.token = this._usuarioService.obtenerToken();
   this.identidad = this._usuarioService.obtenerIdentidad();
 
@@ -34,7 +34,7 @@ export class ProfileComponent implements OnInit{
    public idUsuario:any;
 
   ngOnInit(): void {
-    console.log(this.identidad._id)
+    //console.log(this.identidad._id)
     this.getUserId(this.identidad._id)
 
   }
@@ -61,7 +61,7 @@ export class ProfileComponent implements OnInit{
         this.identidad = this._usuarioService.obtenerIdentidad();
       },
       (error) => {
-        //console.log(<any>error);
+        //.log(<any>error);
 
         ////console.log(<any>error);
         Swal.fire({

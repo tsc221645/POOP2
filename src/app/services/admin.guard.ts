@@ -13,12 +13,12 @@ export class AdminGuard implements CanActivate {
   canActivate(){
     if(this.obtenerIdentidad().rol == "ROL_CLIENTE"){
      this._router.navigate(['/index'])
-     console.log((false))
+     //console.log((false))
 
       return false;
     }
 
-    console.log((true))
+    //console.log((true))
 
     return true;
   }
@@ -30,7 +30,7 @@ export class AdminGuard implements CanActivate {
     */
     obtenerIdentidad(): any {
       const identidadString = localStorage.getItem('identidad');
-      console.log(identidadString)
+      //console.log(identidadString)
       if (identidadString !== null) {
         const identidad2 = JSON.parse(identidadString);
         this.identidad = identidad2;

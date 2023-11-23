@@ -15,14 +15,14 @@ export class UsuarioService {
 
   constructor(public _http: HttpClient) { }
 
-  login(usuario:any, obtenerToken = null): Observable<any> {
-
-    if(obtenerToken != null){
-      usuario.obtenerToken = obtenerToken;
-    }
+  login(usuario:any, obtenerToken:String): Observable<any> {
 
     let params = JSON.stringify(usuario);
+    if(obtenerToken != "true"){
+      usuario.obtenerToken = obtenerToken;
+      usuario.obtenerToken = "true";
 
+    }
     return this._http.post(this.baseUrl + '/login', params, {headers: this.headersVariable});
   }
 
@@ -71,6 +71,8 @@ export class UsuarioService {
   editarUsuarios(modeloUsuario: Clientes, token:any): Observable<any> {
     let parametros = JSON.stringify(modeloUsuario);
     let headersToken = this.headersVariable.set('Authorization', token);
+    //console.log("  --- "+modeloUsuario._id)
+
     return this._http.put(`${this.baseUrl}/editarUsuario/` + modeloUsuario._id, parametros, { headers: headersToken })
   }
 

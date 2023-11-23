@@ -11,7 +11,6 @@ import { UsuarioGuard } from './services/users.guard';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RecommendationsComponent } from './components/recommendations/recommendations.component';
 
-
 const routes: Routes = [
   {path: 'index', component: IndexComponent},
   {path: 'login', component: LoginComponent},
