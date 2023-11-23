@@ -29,7 +29,8 @@ const routes: Routes = [
   ]},
   { path: 'user',  component: DefaultRouterComponent, canActivate: [UsuarioGuard]  ,children: [
     {path: 'dash-board/:idUsuario', component: DashBoardComponent},
-    {path: 'recommendations/:idUsuario', component: RecommendationsComponent}
+    {path: 'recommendations/:idUsuario', component: RecommendationsComponent},
+    {path: 'profile/:idUsuario', component: ProfileComponent}
 
 
 
