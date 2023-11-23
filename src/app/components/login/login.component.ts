@@ -40,8 +40,9 @@ export class LoginComponent implements OnInit {
 
   getTokenPromesa(): Promise<any> {
     return new Promise((resolve, reject)=>{
-      this._usuarioService.login(this.usuarioModel,true).subscribe(
+      this._usuarioService.login(this.usuarioModel,undefined).subscribe(
         (response)=>{
+         console.log(response);
          console.log(response);
 
           localStorage.setItem("token", response.token)
@@ -70,7 +71,7 @@ export class LoginComponent implements OnInit {
 
   login(){
 
-    this._usuarioService.login(this.usuarioModel,false).subscribe(
+    this._usuarioService.login(this.usuarioModel,undefined).subscribe(
       (response)=>{
 
         this.getTokenPromesa().then((respuesta)=>{
@@ -84,7 +85,7 @@ export class LoginComponent implements OnInit {
             text: 'Logueado exitosamente',
           })
           if(response.usuario.rol == "ROL_ADMINISTRADOR"){
-            this._router.navigate(['/admin/dash-board']);
+            this._router.navigate(['/admin/dash-board/'+ response.usuario._id]);
             console.log(response.usuario._id)
           }else {
             this._router.navigate(['/user/dash-board/' + response.usuario._id]);

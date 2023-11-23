@@ -15,7 +15,7 @@ export class UsuarioService {
 
   constructor(public _http: HttpClient) { }
 
-  login(usuario:any, obtenerToken: boolean | null = null): Observable<any> {
+  login(usuario:any, obtenerToken = null): Observable<any> {
 
     if(obtenerToken != null){
       usuario.obtenerToken = obtenerToken;
@@ -23,8 +23,9 @@ export class UsuarioService {
 
     let params = JSON.stringify(usuario);
 
-    return this._http.post(`${this.baseUrl}/login`, params, { headers: this.headersVariable });
+    return this._http.post(this.baseUrl + '/login', params, {headers: this.headersVariable});
   }
+
 
   ObtenerUsuarioLogueado(token:any): Observable<any> {
     let headersToken = this.headersVariable.set('Authorization', token)
@@ -47,8 +48,9 @@ export class UsuarioService {
     return this.token;
   }
 
-  obtenerIdentidad(){
 
+
+  obtenerIdentidad(){
     const identidadString = localStorage.getItem('identidad');
     var identidad2 = identidadString ? JSON.parse(identidadString) : null;
     if(identidad2 != undefined){

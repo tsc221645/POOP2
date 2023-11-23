@@ -22,15 +22,15 @@ const routes: Routes = [
 
 
   { path: 'admin',  component: DefaultAdminComponent, canActivate: [AdminGuard]  ,children: [
-    {path: 'dash-board', component: DashBoardComponent},
-    {path: 'recommendations', component: RecommendationsComponent}
+    {path: 'dash-board/:idUsuario', component: DashBoardComponent},
+    {path: 'recommendations/:idUsuario', component: RecommendationsComponent}
 
 
 
   ]},
   { path: 'user',  component: DefaultRouterComponent, canActivate: [UsuarioGuard]  ,children: [
     {path: 'dash-board/:idUsuario', component: DashBoardComponent},
-    {path: 'recommendations', component: RecommendationsComponent}
+    {path: 'recommendations/:idUsuario', component: RecommendationsComponent}
 
 
 
