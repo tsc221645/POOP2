@@ -14,8 +14,8 @@ export class DashBoardComponent implements OnInit{
   public identidad:any;
 
   ngOnInit(): void {
-    console.log(this.identidad)
-    console.log(this.token)
+   // console.log(this.identidad)
+    //console.log(this.token)
 
     this._activatedRoute.paramMap.subscribe((dataRuta)=>{
     })

@@ -11,6 +11,8 @@ export class Clientes {
     public telefono:String,
     public sucripcion:String,
     public sexo:String,
+    public email:String
+
   ){
   }
 }

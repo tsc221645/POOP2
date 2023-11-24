@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'dash-board', component: DashBoardComponent},
   {path: 'profile', component: ProfileComponent},
+  {path: 'recommendations', component: RecommendationsComponent},
 
 
   { path: 'admin',  component: DefaultAdminComponent, canActivate: [AdminGuard]  ,children: [
