@@ -86,6 +86,16 @@ export class UsuarioService {
     return this._http.delete(`${this.baseUrl}/eliminarUsuario/` + id, { headers: headersToken })
   }
 
+  suscripcionNormal(modeloUsuario: Clientes, token:any): Observable<any> {
+    let parametros = JSON.stringify(modeloUsuario);
+    let headersToken = this.headersVariable.set('Authorization', token);
+    return this._http.put(`${this.baseUrl}/suscripcionNormal` , parametros, { headers: headersToken })
+  }
 
+  suscripcionPremium(modeloUsuario: Clientes, token:any): Observable<any> {
+    let parametros = JSON.stringify(modeloUsuario);
+    let headersToken = this.headersVariable.set('Authorization', token);
+    return this._http.put(`${this.baseUrl}/suscripcionPremium` , parametros, { headers: headersToken })
+  }
 
 }

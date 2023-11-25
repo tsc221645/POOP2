@@ -93,6 +93,7 @@ export class RecommendationsComponent implements OnInit{
   }
 
   deleteRecomendaciones(idRecomendacion:any) {
+    this.getRecomendaciones();
     Swal.fire({
       title: '¿Está seguro que desea eliminar la recomendación?',
       text: "Será eliminado permanentemente",
@@ -124,6 +125,7 @@ export class RecommendationsComponent implements OnInit{
         )
 
       }
+      this.getRecomendaciones();
     })
   }
 
@@ -167,7 +169,7 @@ export class RecommendationsComponent implements OnInit{
 
 
   logOut() {
-    //localStorage.clear()
+    localStorage.clear()
     //localStorage.removeItem("token")
   }
 

@@ -12,7 +12,6 @@ export class Clientes {
     public sucripcion:String,
     public sexo:String,
     public email:String
-
   ){
   }
 }
