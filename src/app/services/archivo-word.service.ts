@@ -1,11 +1,11 @@
-import { InterfazArchivo } from './interface-archivo.service';
+import { InterfaceArchivoService } from './interface-archivo.service';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WordDescargableService implements InterfazArchivo {
+export class WordDescargableService implements InterfaceArchivoService {
   constructor(private http: HttpClient) {}
 
   descargar() {
